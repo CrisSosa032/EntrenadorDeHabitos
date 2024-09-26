@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Recommendations Section */
+.recommendations-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.recommendations-section ul li {
+    background-color: #e0f7fa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #b2ebf2;
+}
+
+/* Advice Section */
+.advice-section {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #dcedc8;
+}
+
+.advice-section p {
+    font-style: italic;
+    color: #558b2f;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004d40;
+}

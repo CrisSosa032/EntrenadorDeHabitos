@@ -1,0 +1,179 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Form Section */
+.form-section form,
+.progress-section form {
+    margin-bottom: 20px;
+}
+
+.progress-section form {
+    display: flex;
+}
+
+.progress-section input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.progress-section button{
+    margin-left: 5px;
+}
+
+.form-section input,
+.progress-section input,
+.form-section select,
+.progress-section select,
+.form-section button,
+.progress-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-section select{
+    margin-left: 5px;
+}
+
+.form-section .sub1 {
+    display: flex;
+}
+
+.form-section button,
+.progress-section button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover,
+.progress-section button:hover {
+    background-color: #004d40;
+}
+
+/* Habits Section */
+.habits-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.habits-section ul li {
+    background-color: #e0f7fa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #b2ebf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habits-section a.button {
+    background-color: #e57373;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0;
+}
+
+.habits-section a.button:hover {
+    background-color: #c62828;
+}
+
+/* Pet Section */
+.pet-section {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #dcedc8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.pet-section p {
+    font-style: italic;
+    color: #558b2f;
+}
+
+.pet-section img {
+    width: 300px;
+    border: 15px solid #ffff;
+    border-radius: 50%;
+    background-color: #ffff;
+}
+
+.pet-section button {
+    background-color: #e57373;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pet-section button:hover {
+    background-color: #c62828;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004d40;
+}

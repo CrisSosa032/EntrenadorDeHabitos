@@ -1,0 +1,27 @@
+# Entorno virtual
+venv/
+env/
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos de sistema
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Archivos de log
+*.log
+
+# Archivos de configuración local
+.env
+
+# Archivos de cobertura de pruebas
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Configuración de Git
+.git/

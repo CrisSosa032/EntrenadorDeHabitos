@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Hábitos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recomendaciones Personalizadas</h1>
+
+        <div class="recommendations-section">
+            <h2>Tus Recomendaciones:</h2>
+            <ul>
+                {% if recommendations %}
+                    {% for recommendation in recommendations %}
+                        <li>{{ recommendation }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>No hay recomendaciones disponibles en este momento.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="advice-section">
+            <h2>Consejo en base a tu progreso:</h2>
+            <p>{{ advice }}</p>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="button">Volver al Inicio</a

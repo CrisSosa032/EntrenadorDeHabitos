@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenador de Hábitos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Entrenador de Hábitos</h1>
+
+        <div class="form-section">
+            <h2>Agregar Nuevo Hábito</h2>
+            <form action="{{ url_for('add_new_habit') }}" method="post">
+                <div class="sub1">
+                    <input type="text" name="name" placeholder="Nombre del hábito" required>
+                    <select name="frequency" required>
+                        <option value="1">Diario</option>
+                        <option value="0">Semanal</option>
+                    </select>
+                </div>
+                <input type="text" name="description" placeholder="Descripción">
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+
+        <div class="habits-section">
+            <h2>Hábitos Actuales</h2>
+            {% if habits %}
+                <ul>
+                    {% for habit in habits %}
+                        <li>
+                            {{ habit[1] }} - {{ 'Diario' if habit[2] == '1' else 'Semanal' }} - {{ habit[3] }}
+                            <a href="{{ url_for('remove_habit', id=habit[0]) }}" class="button">Borrar</a>
+                            <!-- Aquí puedes añadir la barra de progreso más tarde -->
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No hay hábitos registrados.</p>
+            {% endif %}
+        </div>
+
+        <div class="progress-section">
+            <h2>Agregar Progreso</h2>
+            <form action="{{ url_for('add_new_progress') }}" method="post">
+                <select name="habit_id" required>
+                    <option disabled selected>Elige un Habito</option>
+                    {% for habit in habits %}
+                        <option value="{{ habit[0] }}">{{ habit[1] }}</option>
+                    {% endfor %}
+                </select>
+                <input type="date" name="date" required>
+                <select name="status" required>
+                    <option value="1">Completado</option>
+                    <option value="0">No Completado</option>
+                </select>
+                <button type="submit">Añadir Progreso</button>
+            </form>
+        </div>
+
+        <div class="pet-section">
+            <h2>Mi Mascota</h2>
+                {% if pet %}
+                    <p>{{ pet[1] }}</p>
+                    <p>Puntos: {{ pet[2] }}</p>
+                    <img src="{{ url_for('static', filename=pet_image) }}" alt="Mascota">
+                    <form action="{{ url_for('remove_pet') }}" method="post">
+                        <button type="submit" class="button">Eliminar Mascota</button>
+                    </form>
+                {% else %}
+                    <p>Aún no tienes una mascota</p>
+                {% endif %}
+
+        </div>
+
+        <a href="{{ url_for('recommendations') }}" class="button">Ver Recomendaciones</a>
+    </div>
+</body>
+</html>
+
+
+
